@@ -327,3 +327,12 @@ Observer와 Observable 두 역할을 수행
 
 
 
+
+
+## 출처 및 참고 자료
+
+https://github.com/iamchiwon/RxSwift_In_4_Hours
+
+https://github.com/ReactiveX/RxSwift
+
+http://reactivex.io
