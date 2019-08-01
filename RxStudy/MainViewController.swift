@@ -45,7 +45,7 @@ extension MainViewController: UITableViewDataSource {
 extension MainViewController: UITableViewDelegate {
     func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-            let nextViewController = DownloadImageViewController()
+            let nextViewController = DownloadImageView()
             self.navigationController?.pushViewController(nextViewController, animated: true)
         }
     }

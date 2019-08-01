@@ -11,9 +11,11 @@
 		B400C5BC22F165D200C7D147 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B400C5BB22F165D200C7D147 /* MainViewController.swift */; };
 		B400C5C122F165D300C7D147 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B400C5C022F165D300C7D147 /* Assets.xcassets */; };
 		B400C5C422F165D300C7D147 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B400C5C222F165D300C7D147 /* LaunchScreen.storyboard */; };
-		B400C5CC22F169BD00C7D147 /* DownloadImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B400C5CB22F169BD00C7D147 /* DownloadImageViewController.swift */; };
-		B400C5CF22F16A9900C7D147 /* DownloadImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B400C5CE22F16A9900C7D147 /* DownloadImageView.swift */; };
+		B400C5CC22F169BD00C7D147 /* DownloadImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B400C5CB22F169BD00C7D147 /* DownloadImageView.swift */; };
+		B400C5CF22F16A9900C7D147 /* DownloadImageViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B400C5CE22F16A9900C7D147 /* DownloadImageViewLayout.swift */; };
 		B400C5D122F16E9F00C7D147 /* DownloadImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B400C5D022F16E9F00C7D147 /* DownloadImageViewModel.swift */; };
+		B4CA0F0F22F2845E003CA0E8 /* ViewItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CA0F0E22F2845E003CA0E8 /* ViewItemProtocol.swift */; };
+		B4CA0F1122F2850D003CA0E8 /* StackViewItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CA0F1022F2850D003CA0E8 /* StackViewItemProtocol.swift */; };
 		E130637BEE777BE7FD7FECF9 /* Pods_RxStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 458B65AF3C70105833359157 /* Pods_RxStudy.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,9 +27,11 @@
 		B400C5C022F165D300C7D147 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B400C5C322F165D300C7D147 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B400C5C522F165D300C7D147 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B400C5CB22F169BD00C7D147 /* DownloadImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageViewController.swift; sourceTree = "<group>"; };
-		B400C5CE22F16A9900C7D147 /* DownloadImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageView.swift; sourceTree = "<group>"; };
+		B400C5CB22F169BD00C7D147 /* DownloadImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageView.swift; sourceTree = "<group>"; };
+		B400C5CE22F16A9900C7D147 /* DownloadImageViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageViewLayout.swift; sourceTree = "<group>"; };
 		B400C5D022F16E9F00C7D147 /* DownloadImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageViewModel.swift; sourceTree = "<group>"; };
+		B4CA0F0E22F2845E003CA0E8 /* ViewItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewItemProtocol.swift; sourceTree = "<group>"; };
+		B4CA0F1022F2850D003CA0E8 /* StackViewItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewItemProtocol.swift; sourceTree = "<group>"; };
 		C57A624531CABBD6480C2348 /* Pods-RxStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxStudy.debug.xcconfig"; path = "Target Support Files/Pods-RxStudy/Pods-RxStudy.debug.xcconfig"; sourceTree = "<group>"; };
 		D6D05213F5D0F97971CCF467 /* Pods-RxStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxStudy.release.xcconfig"; path = "Target Support Files/Pods-RxStudy/Pods-RxStudy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +78,7 @@
 		B400C5B822F165D200C7D147 /* RxStudy */ = {
 			isa = PBXGroup;
 			children = (
+				B4CA0F0D22F2844C003CA0E8 /* Protocol */,
 				B400C5B922F165D200C7D147 /* AppDelegate.swift */,
 				B400C5BB22F165D200C7D147 /* MainViewController.swift */,
 				B400C5CD22F16A7F00C7D147 /* ImageDown */,
@@ -87,11 +92,20 @@
 		B400C5CD22F16A7F00C7D147 /* ImageDown */ = {
 			isa = PBXGroup;
 			children = (
-				B400C5CB22F169BD00C7D147 /* DownloadImageViewController.swift */,
-				B400C5CE22F16A9900C7D147 /* DownloadImageView.swift */,
+				B400C5CE22F16A9900C7D147 /* DownloadImageViewLayout.swift */,
+				B400C5CB22F169BD00C7D147 /* DownloadImageView.swift */,
 				B400C5D022F16E9F00C7D147 /* DownloadImageViewModel.swift */,
 			);
 			path = ImageDown;
+			sourceTree = "<group>";
+		};
+		B4CA0F0D22F2844C003CA0E8 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				B4CA0F0E22F2845E003CA0E8 /* ViewItemProtocol.swift */,
+				B4CA0F1022F2850D003CA0E8 /* StackViewItemProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		BBDFFE608D67455492A0EB9E /* Frameworks */ = {
@@ -226,10 +240,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B400C5D122F16E9F00C7D147 /* DownloadImageViewModel.swift in Sources */,
-				B400C5CF22F16A9900C7D147 /* DownloadImageView.swift in Sources */,
+				B4CA0F0F22F2845E003CA0E8 /* ViewItemProtocol.swift in Sources */,
+				B400C5CF22F16A9900C7D147 /* DownloadImageViewLayout.swift in Sources */,
 				B400C5BC22F165D200C7D147 /* MainViewController.swift in Sources */,
-				B400C5CC22F169BD00C7D147 /* DownloadImageViewController.swift in Sources */,
+				B400C5CC22F169BD00C7D147 /* DownloadImageView.swift in Sources */,
 				B400C5BA22F165D200C7D147 /* AppDelegate.swift in Sources */,
+				B4CA0F1122F2850D003CA0E8 /* StackViewItemProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

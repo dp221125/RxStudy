@@ -325,9 +325,17 @@ Observer와 Observable 두 역할을 수행
 
 - 에러가 나면 에러를 전달
 
+## Subject vs Relay
 
+Subject -> OnNext, OnError, OnComplete 존재 -> 죽을 수 있음
 
+Relay -> OnError, OnComplete 존재하지 않음(즉, Complete 되지 않음) 
 
+-> 애러나면 무시, 스트림이 끝나지 않음, UI관련된 곳에 사용,  RxCocoa 에 존재
+
+## Drive
+
+asDriver() -> drive / OnError, OnComplete 존재하지 않음 / UI용 / RxCocoa 에 존재
 
 ## 출처 및 참고 자료
 
