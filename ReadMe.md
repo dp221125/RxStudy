@@ -58,8 +58,6 @@ disposebag = DisposeBag() // disposeBag에 담긴 작업 취소
 
 ### Just(생성)
 
-![image-20190730140035145](/Users/meo/Library/Application Support/typora-user-images/image-20190730140035145.png)
-
 ~~~swift
     func example1() {
         Observable.just("Hello RxSwift")  // "Hello RxSwift" 입력
@@ -83,8 +81,6 @@ disposebag = DisposeBag() // disposeBag에 담긴 작업 취소
 
 ### from(생성)
 
-![image-20190730140708565](/Users/meo/Library/Application Support/typora-user-images/image-20190730140708565.png)
-
 ~~~swift
     func example3() {
         Observable.from(["Hello" , "RxSwift"])  // ["Hello", "RxSwift"] 입력
@@ -99,8 +95,6 @@ disposebag = DisposeBag() // disposeBag에 담긴 작업 취소
 
 
 ### map(변환)
-
-![image-20190730141056454](/Users/meo/Library/Application Support/typora-user-images/image-20190730141056454.png)
 
 ~~~swift
     func example4() {
@@ -128,8 +122,6 @@ disposebag = DisposeBag() // disposeBag에 담긴 작업 취소
 
 ### filter(필터)
 
-![image-20190730141922261](/Users/meo/Library/Application Support/typora-user-images/image-20190730141922261.png)
-
 ~~~swift
     func example6() {
         Observable.from([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])  //[1 ~ 10] 입력
@@ -146,8 +138,6 @@ disposebag = DisposeBag() // disposeBag에 담긴 작업 취소
 
 
 ### flatMap(변환)
-
-![image-20190730150959668](/Users/meo/Library/Application Support/typora-user-images/image-20190730150959668.png)
 
 ~~~swift
     func example7() -> Observable<UIImage?> {
@@ -175,10 +165,6 @@ disposebag = DisposeBag() // disposeBag에 담긴 작업 취소
 
 ### combineLatest(결합)
 
-![image-20190730164747507](/Users/meo/Library/Application Support/typora-user-images/image-20190730164747507.png)
-
-
-
 ~~~swift
     func example() {
         let stringArray = ["HELLO", "RXSwift"]
@@ -200,8 +186,6 @@ disposebag = DisposeBag() // disposeBag에 담긴 작업 취소
 - 둘 중 하나라도 변화가 있으면 다른 스트림의 최근값과 결합
 
 ### Zip
-
-![image-20190731140015580](/Users/meo/Library/Application Support/typora-user-images/image-20190731140015580.png)
 
 ~~~swift
     func example() {
@@ -321,31 +305,19 @@ Observer와 Observable 두 역할을 수행
 
 ### BehaviorSubject
 
-![image-20190731131519597](/Users/meo/Library/Application Support/typora-user-images/image-20190731131519597.png)
-
 - subscribe 하면 최근값 방출 or 최근값이 없으면 default 값 방출
-
-![image-20190731131657386](/Users/meo/Library/Application Support/typora-user-images/image-20190731131657386.png)
 
 - BehaviorSubject가 Error를 방출하면 그 이후에 .subscribe하면 에러를 방출
 
 ### PublishSubject
 
-![image-20190731132035227](/Users/meo/Library/Application Support/typora-user-images/image-20190731132035227.png)
-
 - subscribe 한 이후의  Observerble이 방출된 값만 관찰자에게 전달
 
 ### RelaySubject
 
-![image-20190731141134796](/Users/meo/Library/Application Support/typora-user-images/image-20190731141134796.png)
-
-- subscribe 시점과 상관없이 Observable에서 방출된 모드 값을 Observer에게 전달
+- subscribe 시점과 상관없이 Observable에서 방출된 모든 값을 Observer에게 전달
 
 ### AsyncSubject
-
-![image-20190731141626217](/Users/meo/Library/Application Support/typora-user-images/image-20190731141626217.png)
-
-![image-20190731141940922](/Users/meo/Library/Application Support/typora-user-images/image-20190731141940922.png)
 
 - Observable Stream이 완료된 후  마지막 값을 방출
 
