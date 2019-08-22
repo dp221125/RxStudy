@@ -125,7 +125,6 @@ disposebag = DisposeBag() // disposeBag에 담긴 작업 취소
 ~~~swift
     func example6() {
         Observable.from([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])  //[1 ~ 10] 입력
-            .filter { $0 != nil}
             .filter { $0! % 2 == 0 }
             .subscribe(onNext: { str in
                 print(str)              // 2, 4, 6, 8, 10 출력
